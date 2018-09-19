@@ -1,0 +1,15 @@
+
+
+
+@font-face {
+    font-family: 'neoneonregular';
+    src: url('neoneon-webfont.eot');
+    src: url('neoneon-webfont.woff2') format('woff2'),
+         url('neoneon-webfont.woff') format('woff'),
+         url('neoneon-webfont.ttf') format('truetype'),
+         url('neoneon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('neoneon-webfont.svg#neoneonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,701 @@
+/***** SOMMAIRE FEUILLE DE STYLE ****
+1. Généralités
+2. Formulaire 
+    2.a. Généralités
+    2.b. Newsletter
+    2.c. Module réservation
+    2.d. Formulaire de contact
+3. Cards
+    3.a. Généralités
+    3.b. Cards : actualités
+    3.c. Cards : programmation
+4. Fenêtres modales
+    4.a. Généralités
+    4.b. Fenêtres modales : films
+5. Sections
+    5.a Header
+    5.b. Navigation
+    5.c. Festival
+    5.d. Actu
+    5.e. Programmation
+    5.f. Infos pratiques
+    5.g. Footer
+6. Media Queries
+**********************************/
+
+
+/****** 1. Généralités ******/
+html {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+body {
+    position:relative;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:'Dosis', sans-serif;
+    color:#f5f5f5;
+}
+
+h1 {
+    font-family: 'neoneonregular', sans-serif;
+    font-size:3.8rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+h4 {
+    font-size:1rem;
+    letter-spacing: 0.15rem;
+}
+
+h5 {
+    font-size:0.85rem;
+}
+
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+}
+
+h4, h5 {
+    font-weight:bold;
+}
+
+.row {
+    padding:50px 50px;
+}
+
+#back-to-top {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:9999;
+    color: rgba(245,245,245,0.4);
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+#back-to-top:hover {
+    color:#f5f5f5;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+/****** 2.Formulaire ******/
+/**** 2.a. Généralités ****/
+.form-control {
+    color:#f5f5f5;
+    border-radius: 0px;
+    background-color: transparent;
+    border:2px solid #f5f5f5;
+}
+
+.form-control:focus {
+    color:#f5f5f5;
+    background-color: transparent;
+    border:2px solid #f5f5f5;
+    box-shadow:0 0 0 .2rem rgba(245,245,245,0.2)
+}
+
+.form-control::placeholder {
+    color:#f5f5f5;
+    opacity:0.4;
+}
+
+.btn.btn-primary {
+    border-radius:0px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;  
+    border:2px solid #f5f5f5;
+    margin-bottom:15px;
+    background-color: #f5f5f5;
+    color:#283465;
+}
+
+.btn.btn-primary:focus {
+    box-shadow: none !important;
+}
+
+.btn.btn-primary:active {
+    color:#f5f5f5 ;
+    background-color: #e2035c !important;
+    border:2px solid #e2035c !important;
+}
+/**** 2.b. Newsletter ****/
+#actu .form-control {
+    border:2px #283465 solid;
+    background-color: #283465;
+}
+
+#actu .btn.btn-primary {
+    width:100%;
+}
+
+#actu .btn.btn-primary:active {
+    background-color: #283465 !important;
+    border:2px solid #283465 !important;
+}
+
+/**** 2.c. Module réservation ****/
+.modal .form-control {
+    color:#141414;
+}
+
+.modal .form-control::placeholder {
+    color:#545454;
+}
+
+.modal .btn.btn-primary {
+    color:#e2035c;
+    background-color: #fff;
+    border: 1px solid #e2035c;
+    width:100%;
+}
+/**** 2.d. Formulaire de contact ****/
+#btn-form-contact {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/****** 3. Cards ******/
+/**** 3.a. Généralités ****/
+.card {
+    border-radius:0px;
+    position: relative;
+}
+
+#actu .card:hover, #programmation .card:hover {
+    opacity:0.5;
+}
+
+.card-columns .card {
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    border-radius: 0px;
+}
+
+.card-body {
+    padding:0px;
+}
+
+.card-hour {
+    background-color: rgba(40,52,101,0.9);
+    color:#f5f5f5;
+    text-transform: uppercase;
+    position: absolute;
+    top:0;
+    left:18px;
+    padding:15px 10px;
+}
+
+.card-title {
+    padding:20px 18px 0px 18px;   
+}
+
+.card-footer {
+    padding:0;
+    background: transparent;
+    border-top:none;
+}
+
+.card-meta {
+    padding:0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#636D98;
+    font-size:0.9rem;
+}
+
+/**** 3.b. Cards : Actualités ****/
+#actu .card {
+    background-color: #283465;
+}
+
+/**** 3.c. Cards : Programmation ****/
+#programmation .card {
+    background-color: #283465;  
+    margin-bottom: 0.75rem;
+}
+
+/****** 4. Fenêtres modales ******/
+/**** 4.a. Généralités ****/
+.modal-content {
+    border-radius:0px;
+    color:#141414;
+    background-color:#f5f5f5;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 10px;
+    background:#e2035c;
+    border-radius:0;
+
+}
+
+.modal-header h4, .close{
+    color:#f5f5f5;
+}
+
+.close {
+    text-shadow: none;
+    opacity: 1;
+}
+
+.modal-body .row {
+    padding:10px;
+}
+
+.modal-body a {
+    color:#e2035c;
+    text-decoration:none;
+}
+
+.modal-body p, .modal-body img {
+    padding-bottom:10px;
+}
+
+.modal h5 {
+    letter-spacing: 0.1rem;
+}
+
+.modal .table td, .modal .table th {
+    padding:0.5rem;
+    border-top:none;
+    border-bottom: 1px solid #C6C6C6;
+    font-weight: lighter;
+}
+
+.modal-footer {
+    border-top:none;
+    padding-top: 0;
+}
+
+.btn.btn-secondary {
+    border-radius: 0px;
+    border:0px;
+    text-transform: uppercase;
+    background-color:#e2035c; 
+}
+
+/**** 4.b. Fenêtre modale : films ****/
+.videoWrapper {
+    position:relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal .card {
+    border:none;
+    background: transparent !important;
+}
+
+.modal .collapse, .modal .card-body {
+    background: #f5f5f5;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#e2035c;
+    padding-top:5px;
+}
+
+.modal .card-body p {
+    margin-bottom: 0;
+    padding-top:10px;
+}
+
+.modal .card-header {
+    padding:10px 0px;
+    background:transparent !important;
+}
+
+.blockquote {
+    padding:20px 0 0 0;
+    color:#545454;
+    font-weight: lighter;
+    font-style:italic;
+}
+
+.blockquote p {
+    padding-bottom: 0px !important; 
+}
+
+#module-resa {
+    background: white;
+    padding:20px 10px;
+    box-shadow: 0px 0px 5px #C6C6C6;
+}
+
+/****** 5. Sections ******/
+/**** 5.a. Header ****/
+header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)), url(../asset/header1.jpg);
+    background-position: top;
+    background-size: cover;
+    padding:75px 0;
+}
+
+header h1, header h2 {
+    color:#e2035c;
+}
+
+header h2 {
+    font-family: 'neoneonregular', sans-serif;
+}
+
+#header div:first-child:hover {
+    text-shadow: 1px 1px 1px #e2035c, 0 0 0.5em #e2035c, 0 0 0.5em #e2035c;
+}
+
+/**** 5.b. Navigation ****/
+.navbar {
+    padding: 0px;
+}
+
+.bg-dark {
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color:#f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; 
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color:#e2035c;
+    background-color: white;
+    border-top:2px solid #e2035c;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color:#e2035c;
+    background-color: white;
+    border-top:2px solid #e2035c;
+}
+
+#navbarToggler {
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(245,245,245, 0.4);
+}
+
+.nav-item {
+    padding: 0px 10px;
+}
+
+/**** 5.c. Festival ****/
+#presentation {
+    background-color: #e2035c;
+}
+
+#presentation .row {
+    align-items: flex-start;
+}
+
+#presentation h1, #infos h1{
+    color:rgba(245,245,245,0.4);
+}
+
+#text-presentation, #infos-pratiques {
+    border-left: 1px solid rgba(245,245,245,0.4);
+}
+
+/***** 5.d. Actualités ****/
+#actu {
+    background-color: #060e2f;
+}
+
+#actu h1 {
+    color:#283465;
+}
+
+#loadMore {
+    display:flex;
+    justify-content: flex-end;
+    padding-top:20px;
+}
+
+#loadMore a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:10px 20px;
+    background-color: #f5f5f5;
+    color:#283465;
+    letter-spacing: 0.1em;
+}
+
+#loadMore a:hover {
+    color:#f5f5f5;
+    background-color: #283465;
+}
+
+#loadMore a:active {
+    color:#f5f5f5;
+    background-color: #283465;
+}
+
+/**** 5.e. Programmation ****/
+#programmation {
+    background-color: #131D48;
+}
+
+#programmation .row:first-child {
+    padding-bottom: 8px;
+}
+
+#programmation h1 {
+    color: #3E4A7A  ;
+}
+
+#programmation h2 {
+    border-bottom: 1px rgba(245,245,245,1) solid;
+    padding-bottom: 5px;
+}
+
+#programmation .row {
+    align-items: flex-start;
+}
+
+.programmation {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.intro-programmation {
+    color:#636D98;
+}
+
+.programmation:last-child {
+    padding-bottom: 50px;
+}
+
+/**** 5.f. Infos pratiques ****/
+#infos {
+    background-color:#e2035c;
+}
+
+.infosp {
+    margin-bottom: 20px;
+}
+
+#map {
+    width:100%;
+    height:500px;
+    margin-bottom: 20px;
+}
+
+
+#infoMap h5, #infoMap p {
+    font-family: 'Dosis', sans-serif;
+    color:black;
+}
+
+/**** 5.g. Footer ****/
+footer {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)), url(../asset/header1.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+footer h3 {
+    padding-bottom:15px;
+}
+
+footer a {
+    color:#f5f5f5;
+    padding-right: 15px;
+}
+
+footer a:hover {
+    color:#e2035c;
+    text-decoration: none;
+}
+
+.reseaux-sociaux {
+    margin-bottom:35px;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    padding:10px 5px 10px 0;
+}
+
+.contact p, .contact address {
+    padding:0 0 5px 20px;
+}
+
+#credit {
+    background-color: rgba(0,0,0,0.4);
+    padding:15px 65px;
+    color:rgba(245,245,245,0.6);
+}
+
+/****** 6. Media Queries ******/
+@media all and (min-width: 767px) and (max-width: 992px) {
+    /* Actualités */
+    #actu form {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:20px;
+    }
+
+    #actu .form-group {
+        width:66%;
+    }
+
+    #actu form .btn.btn-primary {
+        width:31%;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+}    
+
+@media all and (min-width: 544px) and (max-width: 767px) {
+    /* Navigation */
+    #navbarToggler {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .navbar-dark .navbar-toggler {
+        border:none;
+    }
+
+    button:focus {
+        outline:none;
+    }
+
+    .nav-item {
+        text-align:right;
+    }
+
+    /* Actualités */
+    .card-columns {
+        column-count:1;
+    }
+
+    #actu form {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media all (min-width:480px) and (max-width: 544px) {
+    h1 {
+        font-size:3.6rem;
+    }
+
+    .row {
+        padding:50px 30px;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding:0px;
+    }
+
+    #navbarToggler {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .navbar-dark .navbar-toggler {
+        border:none;
+    }
+
+    button:focus {
+        outline:none;
+    }
+
+    .nav-item {
+        text-align:right;
+    }
+
+    /* Actualités */
+    .card-columns {
+        column-count:1;
+    }
+
+    #actu form {
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 7px;
+    }
+
+    h1 {
+        font-size:3rem;
+    }
+
+    h2 {
+        font-size:1.7rem;
+    }
+
+    .row {
+        padding:50px 30px;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding:0px;
+    }
+
+    #navbarToggler {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .navbar-dark .navbar-toggler {
+        border:none;
+    }
+
+    button:focus {
+        outline:none;
+    }
+
+    .nav-item {
+        text-align:right;
+    }
+
+    /* Actualités */
+    .card-columns {
+        column-count:1;
+    }
+
+    #actu form {
+        margin-bottom: 20px;
+    }
+}

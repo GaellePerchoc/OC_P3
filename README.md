@@ -1,5 +1,7 @@
 # Project 3 : Analyze a client's needs for their film festival
+
 OpenClassrooms // Front-end developer path 
+
 Approved project
 
 www.projet3.gaelleperchoc.com 
